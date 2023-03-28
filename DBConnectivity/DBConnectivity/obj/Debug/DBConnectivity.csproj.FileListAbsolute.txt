@@ -35,3 +35,6 @@ C:\Users\csf\Desktop\database\DBConnectivity\DBConnectivity\obj\Debug\DBConnecti
 C:\Users\csf\Desktop\database\DBConnectivity\DBConnectivity\obj\Debug\DBConnectivity.csproj.CopyComplete
 C:\Users\csf\Desktop\database\DBConnectivity\DBConnectivity\obj\Debug\DBConnectivity.exe
 C:\Users\csf\Desktop\database\DBConnectivity\DBConnectivity\obj\Debug\DBConnectivity.pdb
+C:\Users\csf\Desktop\database\DBConnectivity\DBConnectivity\obj\Debug\DBConnectivity.Register.resources
+C:\Users\csf\Desktop\database\DBConnectivity\DBConnectivity\obj\Debug\DBConnectivity.ShowStudentForm.resources
+C:\Users\csf\Desktop\database\DBConnectivity\DBConnectivity\obj\Debug\DBConnectivity.stdHome.resources
