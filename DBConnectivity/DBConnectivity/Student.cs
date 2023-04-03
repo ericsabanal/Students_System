@@ -66,6 +66,7 @@ namespace DBConnectivity
             public DataTable GetStudentsByName(string name)
             {
 
+            //string query = string.Format("SELECT * FROM Student WHERE FirstName = '{0}'", name);
             string query = string.Format("SELECT * FROM Student WHERE FirstName = '{0}'", name);
                 return DataAccess.ExecuteQuery(query);
 
@@ -81,7 +82,7 @@ namespace DBConnectivity
                 string gender)
             {
 
-                string query = string.Format("INSERT INTO STUDENT (StudentID,FirstName,LastName,Email,Password,Gender) " + "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", Id, fname, lname, email, password, gender);
+                string query = string.Format("INSERT INTO STUDENT (StudentID,FirstName,LastName,Email,Password,Gender) " + "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", @Id, @fname, @lname, @email, @password, @gender);
                 return DataAccess.ExecuteNonQuery(query);
 
             //(StudentID,FirstName,LastName,Email,Password,Gender) these are name in the database

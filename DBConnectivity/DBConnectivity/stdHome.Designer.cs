@@ -74,25 +74,25 @@
             // viewAttendanceToolStripMenuItem
             // 
             this.viewAttendanceToolStripMenuItem.Name = "viewAttendanceToolStripMenuItem";
-            this.viewAttendanceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewAttendanceToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.viewAttendanceToolStripMenuItem.Text = "View Attendance";
             // 
             // viewMarksToolStripMenuItem
             // 
             this.viewMarksToolStripMenuItem.Name = "viewMarksToolStripMenuItem";
-            this.viewMarksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewMarksToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.viewMarksToolStripMenuItem.Text = "View Marks";
             // 
             // viewCoursesToolStripMenuItem
             // 
             this.viewCoursesToolStripMenuItem.Name = "viewCoursesToolStripMenuItem";
-            this.viewCoursesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewCoursesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.viewCoursesToolStripMenuItem.Text = "View Courses";
             // 
             // viewStudentsToolStripMenuItem
             // 
             this.viewStudentsToolStripMenuItem.Name = "viewStudentsToolStripMenuItem";
-            this.viewStudentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewStudentsToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.viewStudentsToolStripMenuItem.Text = "View Students";
             this.viewStudentsToolStripMenuItem.Click += new System.EventHandler(this.viewStudentsToolStripMenuItem_Click);
             // 
@@ -111,6 +111,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(338, 30);
             this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnSearch
             // 
