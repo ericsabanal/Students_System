@@ -35,12 +35,11 @@
             this.viewMarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewCoursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgvstudents = new System.Windows.Forms.DataGridView();
+            this.datagridview1 = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvstudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridview1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -96,13 +95,14 @@
             this.viewStudentsToolStripMenuItem.Text = "View Students";
             this.viewStudentsToolStripMenuItem.Click += new System.EventHandler(this.viewStudentsToolStripMenuItem_Click);
             // 
-            // dgvstudents
+            // datagridview1
             // 
-            this.dgvstudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvstudents.Location = new System.Drawing.Point(115, 63);
-            this.dgvstudents.Name = "dgvstudents";
-            this.dgvstudents.Size = new System.Drawing.Size(574, 239);
-            this.dgvstudents.TabIndex = 1;
+            this.datagridview1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridview1.Location = new System.Drawing.Point(115, 63);
+            this.datagridview1.Name = "datagridview1";
+            this.datagridview1.Size = new System.Drawing.Size(574, 239);
+            this.datagridview1.TabIndex = 1;
+            this.datagridview1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridview1_CellClick);
             // 
             // txtSearch
             // 
@@ -113,19 +113,9 @@
             this.txtSearch.TabIndex = 2;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(587, 27);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(102, 30);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(698, 27);
+            this.btnDelete.Location = new System.Drawing.Point(609, 27);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 30);
             this.btnDelete.TabIndex = 4;
@@ -139,16 +129,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.dgvstudents);
+            this.Controls.Add(this.datagridview1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "stdHome";
             this.Text = "stdHome";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvstudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridview1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,9 +152,8 @@
         private System.Windows.Forms.ToolStripMenuItem viewMarksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewCoursesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewStudentsToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dgvstudents;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.DataGridView datagridview1;
     }
 }

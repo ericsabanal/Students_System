@@ -15,7 +15,7 @@ namespace DBConnectivity
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new stdHome());
+            Application.Run(new Register());
         }
     }
 }

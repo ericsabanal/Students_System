@@ -19,7 +19,7 @@ namespace DBConnectivity
         private void viewStudentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Student student = new Student();
-            dgvstudents.DataSource = student.GetAllStudents();
+            datagridview1.DataSource = student.GetAllStudents();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -48,7 +48,24 @@ namespace DBConnectivity
             //parameters (txtSearch.Text.Trim());
             //di siya effective
             Student student = new Student();
-            dgvstudents.DataSource = student.GetStudentsByName(txtSearch.Text.Trim());
+            datagridview1.DataSource = student.GetStudentsByName(txtSearch.Text.Trim());
+        }
+
+
+        private void datagridview1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (DataGridViewRow row in datagridview1.SelectedRows)
+            {
+               Register register = new Register();
+                register.txtStudentID.Text = row.Cells[0].Value.ToString();
+                register.txtFirstName.Text = row.Cells[1].Value.ToString();
+                register.txtlastname.Text = row.Cells[2].Value.ToString();
+                register.txtEmail.Text = row.Cells[3].Value.ToString();
+                register.txtPassword.Text = row.Cells[4].Value.ToString();
+                register.txtGender.Text = row.Cells[5].Value.ToString();
+
+                register.Show();
+            }
         }
     }
 }

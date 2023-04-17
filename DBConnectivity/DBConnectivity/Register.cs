@@ -24,7 +24,7 @@ namespace DBConnectivity
             lblMessage.Text = "";
             int studentId = int.Parse(txtStudentID.Text.Trim());
             string firstName = txtFirstName.Text.Trim();    
-            string lastName = txtLastName.Text.Trim();  
+            string lastName = txtlastname.Text.Trim();  
             string email = txtEmail.Text.Trim();    
             string password = txtPassword.Text.Trim();  
             string gender = txtGender.Text.Trim();
@@ -89,14 +89,14 @@ namespace DBConnectivity
 
         //private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         //{
-        //    foreach (DataGridViewRow rowupdate in dataGridView1.SelectedRows) 
+        //    foreach (DataGridViewRow rowupdate in dataGridView1.SelectedRows)
         //    {
-                
+
         //        txtFirstName.Text = rowupdate.Cells[1].Value.ToString();
-        //        txtLastName.Text =  rowupdate.Cells[2].Value.ToString();
-        //        txtEmail.Text =     rowupdate.Cells[3].Value.ToString();
-        //        txtPassword.Text =  rowupdate.Cells[4].Value.ToString();
-        //        txtGender.Text =    rowupdate.Cells[5].Value.ToString();
+        //        txtLastName.Text = rowupdate.Cells[2].Value.ToString();
+        //        txtEmail.Text = rowupdate.Cells[3].Value.ToString();
+        //        txtPassword.Text = rowupdate.Cells[4].Value.ToString();
+        //        txtGender.Text = rowupdate.Cells[5].Value.ToString();
         //        txtStudentID.Text = rowupdate.Cells[0].Value.ToString();
         //    }
 
@@ -107,7 +107,7 @@ namespace DBConnectivity
             lblMessage.Text = "";
             int studentId = int.Parse(txtStudentID.Text.Trim());
             string firstName = txtFirstName.Text.Trim();
-            string lastName =  txtLastName.Text.Trim();
+            string lastName =  txtlastname.Text.Trim();
             string email =     txtEmail.Text.Trim();
             string password =  txtPassword.Text.Trim();
             string gender  =   txtGender.Text.Trim();
@@ -169,8 +169,17 @@ namespace DBConnectivity
 
         private void studentsShowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Student student = new Student();
-            dataGridView1.DataSource = student.GetAllStudents();
+            //    Student student = new Student();
+            //    dataGridView1.DataSource = student.GetAllStudents();
+            stdHome home = new stdHome();
+            home.Show();
+        }
+
+        private void datagridviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            stdHome stdHome = new stdHome();
+            stdHome.Show();
+
         }
     }
 }

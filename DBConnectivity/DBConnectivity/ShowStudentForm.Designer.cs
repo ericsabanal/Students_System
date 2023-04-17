@@ -74,6 +74,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Size = new System.Drawing.Size(651, 233);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnShowStudent
             // 
@@ -86,14 +87,14 @@
             this.btnShowStudent.UseVisualStyleBackColor = true;
             this.btnShowStudent.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // ShowStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnShowStudent);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
+            this.Name = "ShowStudentForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

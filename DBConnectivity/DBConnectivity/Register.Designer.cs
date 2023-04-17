@@ -37,16 +37,15 @@
             this.txtStudentID = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtGender = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.studentsShowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtlastname = new System.Windows.Forms.TextBox();
+            this.datagridviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,14 +133,6 @@
             this.txtEmail.Size = new System.Drawing.Size(182, 20);
             this.txtEmail.TabIndex = 9;
             // 
-            // txtLastName
-            // 
-            this.txtLastName.Location = new System.Drawing.Point(112, 141);
-            this.txtLastName.Multiline = true;
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(182, 20);
-            this.txtLastName.TabIndex = 8;
-            // 
             // txtGender
             // 
             this.txtGender.Location = new System.Drawing.Point(112, 231);
@@ -172,20 +163,11 @@
             // 
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(330, 77);
+            this.lblMessage.Location = new System.Drawing.Point(321, 77);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(71, 16);
             this.lblMessage.TabIndex = 13;
             this.lblMessage.Text = "Message";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(333, 109);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(581, 163);
-            this.dataGridView1.TabIndex = 14;
-            //this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnUpdate
             // 
@@ -200,7 +182,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentsShowToolStripMenuItem});
+            this.studentsShowToolStripMenuItem,
+            this.datagridviewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(949, 24);
@@ -214,19 +197,33 @@
             this.studentsShowToolStripMenuItem.Text = "students Show";
             this.studentsShowToolStripMenuItem.Click += new System.EventHandler(this.studentsShowToolStripMenuItem_Click);
             // 
+            // txtlastname
+            // 
+            this.txtlastname.Location = new System.Drawing.Point(112, 141);
+            this.txtlastname.Multiline = true;
+            this.txtlastname.Name = "txtlastname";
+            this.txtlastname.Size = new System.Drawing.Size(182, 20);
+            this.txtlastname.TabIndex = 17;
+            // 
+            // datagridviewToolStripMenuItem
+            // 
+            this.datagridviewToolStripMenuItem.Name = "datagridviewToolStripMenuItem";
+            this.datagridviewToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.datagridviewToolStripMenuItem.Text = "datagridview";
+            this.datagridviewToolStripMenuItem.Click += new System.EventHandler(this.datagridviewToolStripMenuItem_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 450);
+            this.Controls.Add(this.txtlastname);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtGender);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtStudentID);
             this.Controls.Add(this.lblGender);
@@ -239,7 +236,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Register";
             this.Text = "Register";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -255,17 +251,17 @@
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtStudentID;
-        private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtGender;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label lblMessage;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem studentsShowToolStripMenuItem;
+        public System.Windows.Forms.TextBox txtStudentID;
+        public System.Windows.Forms.TextBox txtFirstName;
+        public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.TextBox txtGender;
+        public System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.TextBox txtlastname;
+        private System.Windows.Forms.ToolStripMenuItem datagridviewToolStripMenuItem;
     }
 }

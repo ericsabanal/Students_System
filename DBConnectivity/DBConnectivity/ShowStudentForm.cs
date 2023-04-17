@@ -39,5 +39,10 @@ namespace DBConnectivity
             dataGridView1.DataSource = dt;
            
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

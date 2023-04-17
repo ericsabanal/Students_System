@@ -18,10 +18,11 @@ namespace DBConnectivity
             string email;
             string password;
             string gender;
+        internal object txtStudentID;
 
 
-            //properties
-            public int StudentID { get => studentID; set => studentID = value; }
+        //properties
+        public int StudentID { get => studentID; set => studentID = value; }
             public string FirstName { get => firstname; set => firstname = value; }
             public string LastName { get => lastName; set => lastName = value; }
             public string Email { get => email; set => email = value; }
@@ -47,7 +48,6 @@ namespace DBConnectivity
             {
                 string query = "SELECT * FROM Student";
                 return DataAccess.ExecuteQuery(query);
-
             }
 
             public DataTable GetStudentsByID(int id)
@@ -66,10 +66,10 @@ namespace DBConnectivity
             public DataTable GetStudentsByName(string name)
             {
 
-            //string query = string.Format("SELECT * FROM Student WHERE FirstName = '{0}'", name);
-            string query = string.Format("SELECT * FROM Student WHERE FirstName = '{0}'", name);
+            string query = string.Format("SELECT * FROM Student WHERE FirstName like '%{0}%'", name);
+            
                 return DataAccess.ExecuteQuery(query);
-
+            
             }
 
             //it's return numeric or integer value that's why public int AddStudent
